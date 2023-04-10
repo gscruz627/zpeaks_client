@@ -29,7 +29,7 @@ const SidePanel = () => {
   const [topics, setTopics] = useState(null);
   const [openTopics, setOpenTopics] = useState(isWideScreen);
   const getTopics = async () => {
-    const response = await fetch("http://localhost:8080/topics", {
+    const response = await fetch("https://yodm-server.onrender.com/topics", {
       method: "GET",
     });
     const topicsJson = await response.json();

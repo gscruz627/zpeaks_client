@@ -63,7 +63,7 @@ const Navbar = () => {
             },
           }}
         >
-          Zpeaks
+          YODM
         </Typography>
       </CompWrapper>
       {isWideScreen && (

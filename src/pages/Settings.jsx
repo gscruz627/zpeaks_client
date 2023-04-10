@@ -92,7 +92,7 @@ const Login = () => {
     let responsePassword;
     if (user.username !== username && usernameValid) {
       responseUsername = await fetch(
-        `http://localhost:8080/auth/changeUsername`,
+        `https://yodm-server.onrender.com/auth/changeUsername`,
         {
           method: "PATCH",
           headers: {
@@ -111,7 +111,7 @@ const Login = () => {
       }
     }
     if (user.email !== email && isEmailValid) {
-      responseEmail = await fetch(`http://localhost:8080/auth/changeEmail`, {
+      responseEmail = await fetch(`https://yodm-server.onrender.com/auth/changeEmail`, {
         method: "PATCH",
         headers: {
           Authorization: `Tkn_bearer ${token}`,
@@ -130,7 +130,7 @@ const Login = () => {
     if (password && isPasswordValid) {
       console.log("load here");
       responsePassword = await fetch(
-        `http://localhost:8080/auth/changePassword`,
+        `https://yodm-server.onrender.com/auth/changePassword`,
         {
           method: "PATCH",
           headers: {
@@ -158,7 +158,7 @@ const Login = () => {
       formData.append("picture", picture);
       formData.append("userId", user._id);
       responsePicture = await fetch(
-        `http://localhost:8080/auth/changeProfilePicture`,
+        `https://yodm-server.onrender.com/auth/changeProfilePicture`,
         {
           method: "PATCH",
           headers: {
@@ -192,7 +192,7 @@ const Login = () => {
     }
   };
   const handleDeleteUser = async () => {
-    const response = await fetch(`http://localhost:8080/auth/UserDelete`, {
+    const response = await fetch(`https://yodm-server.onrender.com/auth/UserDelete`, {
       method: "DELETE",
       headers: {
         Authorization: `Tkn_bearer ${token}`,

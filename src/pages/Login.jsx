@@ -12,7 +12,7 @@ const Login = () => {
         <Box borderRadius="5px" borderColor="primary" width={ isWideScreen ? "auto" : "90%"} margin="auto auto">
             <Box maxWidth="600px" margin="auto auto" padding="2rem 6%" textAlign="center">
                 <Typography fontWeight="bold" variant="h1">
-                    Zpeaks
+                    Your Opinion Doesnt Matter
                 </Typography>
             </Box>
             <Form />

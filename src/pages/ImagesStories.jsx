@@ -13,14 +13,14 @@ const ImagesStories = () => {
   const getStories = async () => {
     let response = null;
     if (user) {
-      response = await fetch("http://localhost:8080/stories", {
+      response = await fetch("https://yodm-server.onrender.com/stories", {
         method: "GET",
         headers: {
           Authorization: `Tkn_bearer ${token}`,
         },
       });
     } else {
-      response = await fetch("http://localhost:8080/stories", {
+      response = await fetch("https://yodm-server.onrender.com/stories", {
         method: "GET",
       });
     }

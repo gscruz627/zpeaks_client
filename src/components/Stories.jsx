@@ -30,14 +30,14 @@ const Stories = ({
   const getStories = async (filter) => {
     let response = null;
     if (user) {
-      response = await fetch(`http://localhost:8080/stories?filter=${filter}`, {
+      response = await fetch(`https://yodm-server.onrender.com/stories?filter=${filter}`, {
         method: "GET",
         headers: {
           Authorization: `Tkn_bearer ${token}`,
         },
       });
     } else {
-      response = await fetch(`http://localhost:8080/stories?filter=${filter}`, {
+      response = await fetch(`https://yodm-server.onrender.com/stories?filter=${filter}`, {
         method: "GET",
       });
     }
@@ -49,7 +49,7 @@ const Stories = ({
     let response = null;
     if (user) {
       response = await fetch(
-        `http://localhost:8080/${userId}/stories?filter=${filter}`,
+        `https://yodm-server.onrender.com/${userId}/stories?filter=${filter}`,
         {
           method: "GET",
           headers: {
@@ -59,7 +59,7 @@ const Stories = ({
       );
     } else {
       response = await fetch(
-        `http://localhost:8080/${userId}/stories?filter=${filter}`,
+        `https://yodm-server.onrender.com/${userId}/stories?filter=${filter}`,
         {
           method: "GET",
         }
@@ -72,7 +72,7 @@ const Stories = ({
     let response = null;
     if (user) {
       response = await fetch(
-        `http://localhost:8080/topics/${topic}?filter=${filter}`,
+        `https://yodm-server.onrender.com/topics/${topic}?filter=${filter}`,
         {
           method: "GET",
           headers: {
@@ -82,7 +82,7 @@ const Stories = ({
       );
     } else {
       response = await fetch(
-        `http://localhost:8080/topics/${topic}?filter=${filter}`,
+        `https://yodm-server.onrender.com/topics/${topic}?filter=${filter}`,
         {
           method: "GET",
         }
@@ -93,7 +93,7 @@ const Stories = ({
   };
   const getAgreeStories = async (filter) => {
     const response = await fetch(
-      `http://localhost:8080/${user._id}/agree?filter=${filter}`,
+      `https://yodm-server.onrender.com/${user._id}/agree?filter=${filter}`,
       {
         method: "GET",
         headers: {
@@ -106,7 +106,7 @@ const Stories = ({
   };
   const getDisagreeStories = async (filter) => {
     const response = await fetch(
-      `http://localhost:8080/${user._id}/disagree?filter=${filter}`,
+      `https://yodm-server.onrender.com/${user._id}/disagree?filter=${filter}`,
       {
         method: "GET",
         headers: {
@@ -119,7 +119,7 @@ const Stories = ({
   };
   const getSearchResults = async () => {
     const response = await fetch(
-      `http://localhost:8080/search/stories/${searchKeyword}`,
+      `https://yodm-server.onrender.com/search/stories/${searchKeyword}`,
       {
         method: "GET",
         headers: {

@@ -21,7 +21,7 @@ const SearchResults = () => {
   const [results, setResults] = useState(null);
   const getUserResults = async () => {
     const response = await fetch(
-      `http://localhost:8080/search/users/${keyword}`,
+      `https://yodm-server.onrender.com/search/users/${keyword}`,
       {
         method: "GET",
       }

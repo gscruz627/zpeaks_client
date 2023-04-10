@@ -16,7 +16,7 @@ const UploadStory = () => {
       <Typography variant="h3"> New Story</Typography>
       <Divider variant="fullWidth" />
       <InputBase
-        startAdornment={<img src={`localhost:8080/${user.userPicturePath}`} />}
+        startAdornment={<img src={`https://yodm-server.onrender.com/${user.userPicturePath}`} />}
         endAdornment={ <Image/> }
       />
     </CompWrapper>

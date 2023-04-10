@@ -17,7 +17,7 @@ const Following = () => {
   if (user) {
     getFollowing = async () => {
       const response = await fetch(
-        `http://localhost:8080/auth/${user._id}/following`,
+        `https://yodm-server.onrender.com/auth/${user._id}/following`,
         {
           method: "GET",
           headers: {

@@ -73,7 +73,6 @@ const Story = ({
   let isAgree;
   let isDisagree;
   let hasRated;
-console.log(comments)
   if (user) {
     isAgree = Boolean(agree[user._id]);
     isDisagree = Boolean(disagree[user._id]);
@@ -91,7 +90,7 @@ console.log(comments)
   ).toFixed(2);
   const handleRating = async (value) => {
     const response = await fetch(
-      `http://localhost:8080/story/${storyId}/rate`,
+      `https://yodm-server.onrender.com/story/${storyId}/rate`,
       {
         method: "PATCH",
         headers: {
@@ -107,7 +106,7 @@ console.log(comments)
 
   const handleAgree = async () => {
     const response = await fetch(
-      `http://localhost:8080/story/${storyId}/agree`,
+      `https://yodm-server.onrender.com/story/${storyId}/agree`,
       {
         method: "PATCH",
         headers: {
@@ -124,7 +123,7 @@ console.log(comments)
 
   const handleDisagree = async () => {
     const response = await fetch(
-      `http://localhost:8080/story/${storyId}/disagree`,
+      `https://yodm-server.onrender.com/story/${storyId}/disagree`,
       {
         method: "PATCH",
         headers: {
@@ -141,7 +140,7 @@ console.log(comments)
   const handleComment = async (e) => {
     e.preventDefault();
     const response = await fetch(
-      `http://localhost:8080/story/${storyId}/newComment`,
+      `https://yodm-server.onrender.com/story/${storyId}/newComment`,
       {
         method: "POST",
         headers: {
@@ -157,7 +156,7 @@ console.log(comments)
 
   const handleCommentAgree = async (commentId) => {
     const response = await fetch(
-      `http://localhost:8080/comment/${commentId}/agree`,
+      `https://yodm-server.onrender.com/comment/${commentId}/agree`,
       {
         method: "PATCH",
         headers: {
@@ -172,7 +171,7 @@ console.log(comments)
   };
   const handleCommentDisagree = async (commentId) => {
     const response = await fetch(
-      `http://localhost:8080/comment/${commentId}/disagree`,
+      `https://yodm-server.onrender.com/comment/${commentId}/disagree`,
       {
         method: "PATCH",
         headers: {
@@ -186,7 +185,7 @@ console.log(comments)
     dispatch(setStory({ story: savedStory }));
   };
   const handleDeleteStory = async () => {
-    const response = await fetch(`http://localhost:8080/story/${storyId}`, {
+    const response = await fetch(`https://yodm-server.onrender.com/story/${storyId}`, {
       method: "DELETE",
       headers: {
         Authorization: `Tkn_bearer ${token}`,
@@ -198,7 +197,7 @@ console.log(comments)
     navigate(0);
   };
   const handleDeleteComment = async (thisCommentId) => {
-    const response = await fetch(`http://localhost:8080/story/${thisCommentId}/comment`, {
+    const response = await fetch(`https://yodm-server.onrender.com/story/${thisCommentId}/comment`, {
       method: "DELETE",
       headers: {
         Authorization: `Tkn_bearer ${token}`,

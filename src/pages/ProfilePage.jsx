@@ -28,8 +28,7 @@ const ProfilePage = () => {
   const { palette } = useTheme();
   const dispatch = useDispatch();
   const getUserInfo = async () => {
-    console.log("load")
-    const response = await fetch(`http://localhost:8080/auth/${thisUserId}`, {
+    const response = await fetch(`https://yodm-server.onrender.com/auth/${thisUserId}`, {
       method: "GET",
     });
     const thisUserResponse = await response.json();
@@ -44,7 +43,7 @@ const ProfilePage = () => {
   
   const handleFollow = async () => {
     const response = await fetch(
-      `http://localhost:8080/auth/follow/${user._id}/${thisUserId}`,
+      `https://yodm-server.onrender.com/auth/follow/${user._id}/${thisUserId}`,
       {
         method: "PATCH",
         headers: { Authorization: `Tkn_bearer ${token}` },

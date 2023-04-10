@@ -37,7 +37,7 @@ const NewStory = () => {
 
   
   const getTopics = async () => {
-    const response = await fetch("http://localhost:8080/topics", {
+    const response = await fetch("https://yodm-server.onrender.com//topics", {
       method: "GET",
     });
     const topicsJson = await response.json();
@@ -57,7 +57,7 @@ const NewStory = () => {
       if (picture) {
         formData.append("picture", picture);
       }
-      const fetchResponse = await fetch("http://localhost:8080/newStory", {
+      const fetchResponse = await fetch("https://yodm-server.onrender.com/newStory", {
         method: "POST",
         headers: { Authorization: `Tkn_bearer ${token}` },
         body: formData,
@@ -69,7 +69,7 @@ const NewStory = () => {
   };
   const getResponseStoryData = async () => {
     const fetchResponse = await fetch(
-      `http://localhost:8080/story/${response}`, {
+      `https://yodm-server.onrender.com/story/${response}`, {
         method: "GET"
       }
     )
@@ -82,7 +82,6 @@ const NewStory = () => {
       getResponseStoryData();
     }
   }, []);
-  // add useeffect on topics or i don't know, design test, mobile, check errors, try upload one or more, with / out image.
   return (
     <>
       <Navbar />

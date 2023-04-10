@@ -101,7 +101,7 @@ const Form = () => {
       formData.append("picture", picture);
       formData.append("email", email);
 
-      const response = await fetch("http://localhost:8080/auth/register", {
+      const response = await fetch("https://yodm-server.onrender.com/auth/register", {
         method: "POST",
         body: formData,
       });
@@ -117,7 +117,7 @@ const Form = () => {
 
   const login = async () => {
     if (username && password) {
-      const response = await fetch("http://localhost:8080/auth/login", {
+      const response = await fetch("https://yodm-server.onrender.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
