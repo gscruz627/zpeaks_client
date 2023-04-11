@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/YODM/static/css/main.3c3aad37.css",
+    "main.js": "/YODM/static/js/main.1e753a36.js",
+    "index.html": "/YODM/index.html",
+    "main.3c3aad37.css.map": "/YODM/static/css/main.3c3aad37.css.map",
+    "main.1e753a36.js.map": "/YODM/static/js/main.1e753a36.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3c3aad37.css",
+    "static/js/main.1e753a36.js"
+  ]
+}
